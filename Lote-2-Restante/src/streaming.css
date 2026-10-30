@@ -1,0 +1,443 @@
+.explore-section {
+  min-height: calc(100vh - 180px);
+}
+
+.explore-heading h1 {
+  margin: 8px 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(30px, 4vw, 42px);
+  letter-spacing: -1.5px;
+}
+
+.explore-heading p:last-child {
+  color: #aab6ad;
+  font-size: 13px;
+}
+
+.supabase-catalog-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 16px 0;
+  padding: 14px 16px;
+  border: 1px solid #2b382e;
+  border-radius: 10px;
+  background: #151b16;
+}
+
+.supabase-catalog-heading .catalog-disclaimer {
+  margin: 0;
+}
+
+.supabase-catalog-heading code {
+  color: #c4e7d0;
+}
+
+.catalog-disclaimer,
+.catalog-count {
+  color: #91a197;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.catalog-offline-notice {
+  margin: 12px 0;
+  color: #d7bc7a;
+  font-size: 12px;
+}
+
+.online-track-card .heart-button:disabled,
+.track-actions .heart-button:disabled {
+  color: #72e0a8;
+  cursor: default;
+  opacity: 0.8;
+}
+
+.track-actions {
+  flex-wrap: wrap;
+}
+
+.track-actions > a {
+  display: grid;
+  place-items: center;
+  padding: 6px;
+  color: #9ba69e;
+}
+
+.track-actions > a:hover {
+  color: #72e0a8;
+}
+
+.online-track-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.online-track-card {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #2b342d;
+  border-radius: 9px;
+  background: #171c18;
+}
+
+.online-track-card:hover,
+.online-track-card.is-playing {
+  background: #222b24;
+}
+
+.online-track-play {
+  display: grid;
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 50%;
+  background: #42df91;
+  color: #082012;
+}
+
+.online-track-info {
+  display: grid;
+  flex: 1;
+  gap: 4px;
+  min-width: 0;
+}
+
+.online-track-info b,
+.online-track-info span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.online-track-info b {
+  font-size: 13px;
+}
+
+.online-track-info span,
+.online-track-info small {
+  color: #a2ada4;
+  font-size: 11px;
+}
+
+.control-active {
+  color: #42df91 !important;
+}
+
+.auth-shell {
+  display: grid;
+  min-height: 100dvh;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(ellipse at 50% 20%, #20372a 0, transparent 48%),
+    #101411;
+}
+
+.auth-card {
+  display: grid;
+  width: min(100%, 410px);
+  gap: 16px;
+  padding: 32px;
+  border: 1px solid #303a32;
+  border-radius: 16px;
+  background: #171c18;
+  box-shadow: 0 24px 80px #0006;
+}
+
+.auth-card .brand-mark {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 13px;
+  background: #42df91;
+  color: #082012;
+}
+
+.auth-card .eyebrow,
+.auth-card h1,
+.auth-card p {
+  margin: 0;
+}
+
+.auth-card h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 30px;
+}
+
+.auth-description {
+  color: #aab6ad;
+  font-size: 13px;
+}
+
+.auth-card label {
+  display: grid;
+  gap: 7px;
+  color: #dce5de;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.auth-card input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #354239;
+  border-radius: 8px;
+  outline: none;
+  background: #101411;
+  color: #f7f7f7;
+  font: inherit;
+}
+
+.auth-card input:focus {
+  border-color: #42df91;
+}
+
+.auth-error {
+  color: #ff9a9a;
+  font-size: 12px;
+}
+
+.auth-card .primary-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.account-password-backdrop {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow-y: auto;
+  padding: 20px;
+  background: #000a;
+}
+
+.account-password-dialog {
+  display: grid;
+  width: min(100%, 410px);
+  gap: 16px;
+  padding: 26px;
+  border: 1px solid #344c5a;
+  border-radius: 18px;
+  background: #13212c;
+  box-shadow: 0 24px 80px #0008;
+}
+
+.app-settings-dialog {
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  width: min(100%, 620px);
+  max-height: min(88dvh, 780px);
+  min-height: 0;
+  overflow: hidden;
+}
+
+.settings-title-row,
+.settings-section-heading,
+.settings-notification-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.settings-title-row h2,
+.settings-title-row .eyebrow {
+  margin: 0;
+}
+
+.settings-title-row h2 {
+  margin-top: 5px;
+}
+
+.app-settings-content {
+  display: grid;
+  gap: 8px;
+  min-height: 0;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.settings-section {
+  display: grid;
+  gap: 12px;
+  padding: 16px 0;
+  border-top: 1px solid #344c5a;
+}
+
+.settings-section h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.settings-section label:not(.settings-toggle) {
+  display: grid;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.settings-section select,
+.settings-section input[type='text'],
+.settings-section input[type='email'] {
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 11px;
+  border: 1px solid #3b5260;
+  border-radius: 10px;
+  background: #0d1720;
+  font: inherit;
+}
+
+.settings-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.settings-toggle > span {
+  display: grid;
+  gap: 4px;
+}
+
+.settings-toggle b {
+  font-size: 12px;
+}
+
+.settings-toggle small,
+.settings-note {
+  margin: 0;
+  color: #aab6ad;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.settings-toggle input[type='checkbox'] {
+  width: 19px;
+  height: 19px;
+  flex: 0 0 19px;
+  accent-color: var(--backstage-accent);
+}
+
+.settings-section-heading h3 {
+  margin: 0;
+}
+
+.settings-stats {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px 14px;
+  align-items: center;
+  font-size: 11px;
+}
+
+.settings-stats span {
+  color: #aab6ad;
+}
+
+.settings-stats b {
+  text-align: right;
+}
+
+.settings-action {
+  justify-self: start;
+}
+
+.settings-notification-row > span {
+  color: #aab6ad;
+  font-size: 11px;
+}
+
+.app-settings-dialog > .account-password-actions {
+  padding-top: 14px;
+  border-top: 1px solid #344c5a;
+}
+
+.account-password-dialog > form {
+  display: grid;
+  gap: 16px;
+}
+
+.account-password-dialog h2,
+.account-password-dialog p {
+  margin: 0;
+}
+
+.account-password-dialog h2 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.account-password-dialog > p {
+  color: #aab6ad;
+  font-size: 13px;
+}
+
+.account-password-dialog label {
+  display: grid;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.account-password-dialog input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #3b5260;
+  border-radius: 11px;
+  background: #0d1720;
+  font: inherit;
+}
+
+.account-password-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.profile-password-setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 15px;
+  border-top: 1px solid #344c5a;
+}
+
+.profile-password-setting > div {
+  display: grid;
+  gap: 4px;
+}
+
+.profile-password-setting b {
+  font-size: 13px;
+}
+
+.profile-password-setting span {
+  color: #aab6ad;
+  font-size: 11px;
+}
+
+@media (max-width: 700px) {
+  .supabase-catalog-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .online-track-card {
+    gap: 9px;
+    padding: 9px;
+  }
+
+}

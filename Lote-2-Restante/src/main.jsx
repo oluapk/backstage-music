@@ -1,0 +1,13 @@
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App.jsx';
+import './style.css';
+import './streaming.css';
+import './mobile.css';
+import './backstage-theme.css';
+import './listening-layout.css';
+import './library-views.css';
+import './catalog-search.css';
+import './functional-features.css';
+import './catalog-play.css';
+createRoot(document.getElementById('root')).render(<React.StrictMode><App /></React.StrictMode>);

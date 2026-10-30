@@ -1,0 +1,10 @@
+import { writeFile, appendFile } from 'node:fs/promises';
+import path from 'node:path';
+const { RUNNER_TEMP: temporary, ANDROID_KEYSTORE_BASE64: encoded, GITHUB_ENV: githubEnv } = process.env;
+if (!temporary || !encoded || !githubEnv) throw new Error('Configure ANDROID_KEYSTORE_BASE64 no GitHub Actions.');
+const bytes = Buffer.from(encoded.replace(/\s/g, ''), 'base64');
+if (bytes.length < 100) throw new Error('Keystore Android inválido.');
+const file = path.join(temporary, 'backstage-signing.keystore');
+await writeFile(file, bytes, { mode: 0o600 });
+await appendFile(githubEnv, `ANDROID_KEYSTORE_PATH=${file}\n`);
+console.log('Keystore restaurado apenas no diretório temporário do runner.');
